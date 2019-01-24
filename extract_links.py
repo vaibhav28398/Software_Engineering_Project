@@ -19,7 +19,7 @@ def recursive_links_extract(url):
 		dead_links=dead_links+1
 	else:
 		resp_head=response.headers
-		length=-1#if content length infp is not present
+		length=-1#if content length info is not present
 		if 'Content-Length' in resp_head:
 			length=resp_head['Content-Length']
 		links_info.append((url,"Reachable",length,time_elapsed))
